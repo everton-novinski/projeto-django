@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block 'conteudo' %}
+
+<div class="container">
+    <div class="row">
+        {% for profissionais in profissional %}
+            <div class="col-md">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{profissionais.nome}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">{{profissionais.cidade}} {{profissionais.estado}}</h6>
+                      <p class="card-text">{{profissionais.telefone}}</p>
+                      <p class="card-text">{{profissionais.especialidades}}</p>
+                      <p class="card-text">data de cadastro: {{profissionais.data_cadastro}}</p>
+                      
+
+                      <a href="{% url 'ver_profissional' profissionais.id %}" class="btn  btn-dark">Acessar</a>
+                    </div>
+                  </div>
+                    <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
+            </div>
+        {% endfor %}
+    
+
+    
+
+    
+    </div>
+</div>
+
+
+{% endblock %}

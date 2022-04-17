@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block 'conteudo'%}
+
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nome: {{profissional.nome}}</li>
+      <li class="list-group-item">Telefone: {{profissional.telefone}}</li>
+      <li class="list-group-item">Cidade: {{profissional.cidade}}</li>
+      <li class="list-group-item">Estado: {{profissional.estado}}</li>
+      <li class="list-group-item">Estado: {{profissional.data_cadastro}}</li>
+      <p class="card-text">{{profissional.descricao}}</p>
+    </ul>
+
+    
+    <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
+  </div>
+
+
+{% endblock%}

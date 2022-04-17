@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profissionais De T.I</title>
+</head>
+<body>
+  <nav class="navbar navbar-dark" style="background-color: #4169E1;">
+    <a class="navbar-brand" href="http://127.0.0.1:8000/auth/login/">Profissionais De T.I</a>
+      
+      <a href="{% url 'login' %}" class="btn btn-warning btn-lg" style="text-align: right;">Login</a>
+  </nav>
+  <br>
+  {% block 'conteudo'%}
+
+    
+    <iframe width="600" height="400" 
+    src="https://www.youtube.com/embed/DNGI5aD9MJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>   
+  
+  
+  <div style="font-size: 30px; color: black;" >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div> 
+  
+</body>
+<footer>
+  Rodapé da página
+</footer>
+{% endblock %}
+</html>
+
+
+<style>
+  body{
+    background: #87CEFA ;
+    font-size: 40px;
+    color: azure;
+
+
+}
+  nav{
+    background-color: #4169E1;
+    font-size: 40px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+   
+}
+
+  h1{
+    text-align: left;
+    font-size: 30px;
+    color: black;
+}
+
+  iframe{
+    width: 750px;
+    margin:0 auto;
+    display: block;
+}
+  footer{
+    position: relative;
+    bottom: 0;
+    background-color: #1E90FF;
+    color: white;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+
+}
+a{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+</style>
+
