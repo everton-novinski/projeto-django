@@ -14,6 +14,11 @@
     
     <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Python</a>
+        {% if usuario_logado %}
+          <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
+        {% else %}
+          <a href="{% url 'login' %}" class="btn btn-warning btn-lg" style="text-align: right;">Login</a> 
+        {% endif %}
     </nav>
   
     

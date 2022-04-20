@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +12,10 @@
 <body>
   <nav class="navbar navbar-dark" style="background-color: #4169E1;">
     <a class="navbar-brand" href="http://127.0.0.1:8000/auth/login/">Profissionais De T.I</a>
+        
+    <button href="{% url 'login' %}" class="btn btn-warning btn-lg">Login</button>    
+    
       
-      <a href="{% url 'login' %}" class="btn btn-warning btn-lg" style="text-align: right;">Login</a>
   </nav>
   <br>
   {% block 'conteudo'%}
@@ -80,6 +85,16 @@ a{
   font-size: 40px;
   color: white;
 }
-
+button{
+  border: 0;
+  padding: 10px;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
 </style>
 
