@@ -13,7 +13,7 @@
                       <h6 class="card-subtitle mb-2 text-muted">{{profissionais.cidade}} {{profissionais.estado}}</h6>
                       <p class="card-text">Telefone: {{profissionais.telefone}}</p>
                       <p class="card-text">Especialidade(s){{profissionais.especialidades}}</p>
-                      <p class="card-text">data de cadastro: {{profissionais.data_cadastro}}</p>
+                      <p class="card-text">Data de cadastro: {{profissionais.data_cadastro}}</p>
                       
 
                       <a href="{% url 'ver_profissional' profissionais.id %}" class="btn  btn-dark">Acessar</a>
@@ -23,12 +23,15 @@
             </div>
         {% endfor %}
     
+    
 
     
 
     
     </div>
 </div>
+
+
 
 
 {% endblock %}

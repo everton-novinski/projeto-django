@@ -15,6 +15,9 @@
     <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Python</a>
         {% if usuario_logado %}
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Cadastra-se você tambem.
+          </button>
           <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
         {% else %}
           <a href="{% url 'login' %}" class="btn btn-warning btn-lg" style="text-align: right;">Login</a> 
@@ -28,6 +31,34 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" ></script>
 
+    {% if usuario_logado %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cadastrar Porfissional</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="{% url 'cadastrar_profissional' %}" method="POST">
+              {% csrf_token %}
+              <table style="background-color: blue;">
+              {{form.as_table}}
+              </table>
+              <input type="submit" class="btn btn-success" value="Cadastrar">
+              
+
+
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    {% endif %}
+ 
    
   </body>
 </html>
