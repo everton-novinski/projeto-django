@@ -22,7 +22,10 @@ def home(request):
 
 def ver_profissional(request, id):
     profissional = Profissional.objects.get(id = id)
-    return render(request, 'ver_profissional.html', {'profissional' : profissional, 'usuario_logado': request.session.get('usuario')} )
+    form = CadastroProfissional()
+    return render(request, 'ver_profissional.html', {'profissional' : profissional, 
+                                                    'usuario_logado': request.session.get('usuario'),
+                                                    'form' : form} )
 
 def cadastrar_profissional(request):
     if request.method == 'POST':

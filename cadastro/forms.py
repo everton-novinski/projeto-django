@@ -9,6 +9,6 @@ from . models import Profissional
 class CadastroProfissional(forms.ModelForm):
     class Meta:
         model = Profissional
-        fields = "__all__"
-        
+        fields = ('nome', 'telefone', 'cidade', 'estado', 'descricao','especialidades')
+
 
