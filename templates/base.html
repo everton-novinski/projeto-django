@@ -13,14 +13,13 @@
   <body>
     
     <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Python</a>
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">Home</a>
         {% if usuario_logado %}
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Cadastra-se você tambem.
           </button>
           <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
-        {% else %}
-          <a href="{% url 'login' %}" class="btn btn-warning btn-lg" style="text-align: right;">Login</a> 
+         
         {% endif %}
     </nav>
   
@@ -62,3 +61,8 @@
    
   </body>
 </html>
+<style>
+  
+ 
+  
+</style>

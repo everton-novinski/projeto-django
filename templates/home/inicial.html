@@ -2,97 +2,186 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="br-pt">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profissionais De T.I</title>
+  
+  
+  {% block 'head'%} {% endblock%}
+  <title>{% block 'titulo'%} {% endblock%}</title>
 </head>
-<body>
-  <nav class="navbar navbar-dark"">
-    <a class="navbar-brand">Profissionais De T.I</a>
-    <button type="button" class="btn btn-success">Success</button>   
-          
-  </nav>
-  <br>
+<body class="text-center">
+  
   {% block 'conteudo'%}
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Cover</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    
-    <iframe width="600" height="400" 
-    src="https://www.youtube.com/embed/DNGI5aD9MJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>   
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Cover your page.</h1>
+      <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+      <p class="lead">
+        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+
+
+
   
-  
-  <div style="font-size: 30px; color: black;" >
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </div> 
-  
+  {% endblock%}
 </body>
-<footer>
-  Rodapé da página
-</footer>
-{% endblock %}
 </html>
 
-
 <style>
-  body{
-    background: #87CEFA ;
-    font-size: 40px;
-    color: azure;
-
-
-}
-  nav{
-    background-color: #4169E1;
-    font-size: 40px;
-    text-align: center;
-    height: 50px;
-    width: 100%;
-   
+  .navbar {
+  overflow: hidden;
+  background-color: #0275d8;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-  h1{
-    text-align: left;
-    font-size: 30px;
-    color: black;
-}
-
-  iframe{
-    width: 750px;
-    margin:0 auto;
-    display: block;
-}
-  footer{
-    position: relative;
-    bottom: 0;
-    background-color: #1E90FF;
-    color: white;
-    width: 100%;
-    height: 50px;    
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
-
-}
-a{
-  text-align: center;
-  font-size: 40px;
+.navbar a {
+  float: right;
+  font-size: 16px;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-button{
-  border: 0;
-  padding: 10px;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
 }
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
 </style>
+
+
 
