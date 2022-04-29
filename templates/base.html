@@ -12,8 +12,8 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="http://127.0.0.1:8000/">Home</a>
+    <nav class="navbar">
+        <a class="navbar-1" href="http://127.0.0.1:8000/">Home</a>
         {% if usuario_logado %}
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Cadastra-se você tambem.
@@ -62,7 +62,16 @@
   </body>
 </html>
 <style>
+.navbar-1{
+  color: white;
+
+}
+.navbar{
+width: 100%;
+background-color: #252323;
+height: 60px;
+}
   
- 
+
   
 </style>
