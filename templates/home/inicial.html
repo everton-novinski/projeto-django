@@ -70,29 +70,24 @@
           It has survived not only five centuries.</p>
             
           <br>
+          <br>
 
-      <div class="col-3 bloco-texto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16" style="color: black;">
-            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
-          </svg>
+      <div class="col-3 bloco-texto"> 
+          <img src="{% static 'img/content-1.png' %}" />
           <h3><b>Tecnicos</b></h3>
           <p>
               Encontre seu profissional conforme a sua nessecidade em apenas um click.
           </p>
       </div>
       <div class="col-3 bloco-texto" style="margin-top: 6em;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16" style="color: rgb(0, 0, 7);">
-            <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
-          </svg>
-          <h3><b>tecnologia</b></h3>
+          <img src="{% static 'img/content-2.png' %}" />
+          <h3><b>Tecnologia</b></h3>
           <p>
               Profissionais com especialidades na area de tecnologia.
           </p>
       </div>
       <div class="col-3 bloco-texto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16" style="color: rgb(1, 0, 8);">
-            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-          </svg>
+          <img src="{% static 'img/content-3.png' %}" />
           <h3><b>Profissionais</b> perto de voce.</h3>
           <p>Encontre profissionais perto de você em seu estado e em sua cidade para um atendimento mais agil.
           </p>
@@ -100,7 +95,44 @@
   </div>
 </div>       
 <footer>
-  <p>ola</p>
+  <div class="col-100 footer">
+      <div class="content">
+          <div class="col-4">
+              <h3><b>Populr Post</b></h3>
+              <p>Lorem Ipsum is simply dummy
+                  text of the printing.</p>
+              <p class="clock">25-September 2013<p>
+
+                      
+          </div>
+          <div class="col-4">
+              <h3><b>Tags</b></h3>
+              <p>apps blog blogroll christmas cms coda concert daily design develop dialog drinks envato food fun
+                  gallery gift holiday icon illustration ipad iphone journal jquery label link marketing mobile
+                  motion music photo profession quotation recipes show sound strategy tv typography video</p>
+          </div>
+          <div class="col-4">
+              <h3><b>A little about us</b></h3>
+              <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable.
+                  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.
+              </p>
+          </div>
+          <div class="col-4">
+              <h3><b>Get in touch</b></h3>
+              <p>
+                  Lorem Ipsum is simply dummy
+                  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  text ever since.
+              </p>
+              <p class="local">Texas, US<p>
+                      <p class="emailico">email@email.com<p>
+                              <p class="telefoneico">890-09880-45590<p>
+          </div>
+      </div>
+  </div>
 </footer>
 
 
@@ -145,7 +177,8 @@ position: relative;
 .header-2 {
 background-color: #ffffff;
 width: 980px;
-margin: 0 auto;
+margin-left: 25%;
+padding: 15px;
 
 }
 
@@ -163,7 +196,7 @@ text-align: center;
 }
 
 .menu ul li:hover {
-border-bottom: 3px solid #0a0000;
+border-bottom: 3px solid  #00bac6;
 }
 
 .menu ul li a:hover {
@@ -171,7 +204,7 @@ color: #0a0000;
 }
 
 .menu ul li a {
-color: #603d21;
+color: #00bac6;
 text-decoration: none;
 font-size: 18px;
 text-transform: uppercase;    
@@ -250,6 +283,69 @@ padding: 0px!important;
     float: left;
     position: relative;
 }
+
+
+
+.footer h3 {
+    text-align: left;
+}
+
+.footer {
+    background-image: url("{% static 'img/footer.png' %}");
+    color: #ffffff;
+}
+
+.footer-2 {
+    background-image: url("{% static 'img/footer2.png' %}");
+    color: #c1c1c1;;
+    height: 90px;
+    
+}
+
+
+.footer p {
+    width: 90%;
+    text-align: left;
+}
+
+.footer-2 p {
+    padding: 10px;
+}
+
+.clock {
+    color: #130101!important;
+}
+
+.clock:before {
+    content: '';
+    width:  15px;
+    height: 15px;
+    display: inline-block;
+    background-image: url("{% static 'img/clock.png' %}");
+    float: left;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+
+.local:before, .emailico:before, .telefoneico:before {
+    content: '';
+    width:  17px;
+    height: 24px;
+    display: inline-block;
+    float: left;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+.local:before {
+    background-image: url("{% static 'img/local.png' %}");
+}  
+.emailico:before {
+    background-image: url("{% static 'img/email.png' %}");
+}  
+.telefoneico:before {
+    background-image: url("{% static 'img/telefoneico.png' %}");
+    color: #0a0000;
+}  
 
 
   
