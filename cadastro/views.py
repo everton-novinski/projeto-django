@@ -28,11 +28,11 @@ def ver_profissional(request, id):
                                                     'form' : form} )
 
 def cadastrar_profissional(request):
-    if request.method == 'POST':
+    if request.method == 'POST':        
         form = CadastroProfissional(request.POST)
 
         if form.is_valid():
             form.save()
-            return HttpResponse('salvo')
+            return redirect('home')
         else:
             return HttpResponse('errado')    

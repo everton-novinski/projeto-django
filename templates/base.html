@@ -13,12 +13,12 @@
   <body>
     
     <nav class="navbar">
-        <a class="navbar-1" href="http://127.0.0.1:8000/">Home</a>
+        <a class="hover" href="http://127.0.0.1:8000/" style="color: #00FFFF;">Home</a>
         {% if usuario_logado %}
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Cadastra-se você tambem.
           </button>
-          <a href="{% url 'sair' %}" class="btn btn-warning btn-lg">sair</a>
+          <a href="{% url 'sair' %}" class="btn btn-outline-warning">sair</a>
          
         {% endif %}
     </nav>
@@ -33,17 +33,17 @@
     {% if usuario_logado %}
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background-color: #A9E2F3;">
-          <div class="modal-header" style="background-color: #A9E2F3;">
-            <h5 class="modal-title" id="exampleModalLabel" style="background-color: #A9E2F3;">Cadastrar Porfissional</h5>
+        <div class="modal-content" style="background-color: #00FFFF;">
+          <div class="modal-header" style="background-color: #00FFFF;">
+            <h5 class="modal-title" id="exampleModalLabel" style="background-color: #00FFFF;">Cadastrar Profissional</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form action="{% url 'cadastrar_profissional' %}" method="POST" style="background-color: #A9E2F3;">
+            <form action="{% url 'cadastrar_profissional' %}" method="POST" style="background-color: #00FFFF;">
               {% csrf_token %}
-              <table style="background-color: #A9E2F3;">
+              <table style="background-color: #00FFFF;">
               {{form.as_table}}
               </table>
               <input type="submit" class="btn btn-success" value="Cadastrar">
