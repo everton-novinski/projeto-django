@@ -13,12 +13,12 @@
   <body>
     
     <nav class="navbar">
-        <a class="hover" href="http://127.0.0.1:8000/" style="color: #00FFFF;">Home</a>
+        <a class="btn btn-light" href="http://127.0.0.1:8000/" style="color: #011111;">Home</a>
         {% if usuario_logado %}
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
             Cadastra-se você tambem.
           </button>
-          <a href="{% url 'sair' %}" class="btn btn-outline-warning">sair</a>
+          <a href="{% url 'sair' %}" class="btn btn-danger">sair</a>
          
         {% endif %}
     </nav>
