@@ -1,3 +1,4 @@
+from ast import arg
 from dataclasses import fields
 import django
 
@@ -12,3 +13,6 @@ class CadastroProfissional(forms.ModelForm):
         fields = "__all__"
 
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['usuario'].widget = forms.HiddenInput()

@@ -13,6 +13,8 @@ def home(request):
         usuario = Usuario.objects.get(id = request.session['usuario'])
         profissional = Profissional.objects.all()
         form = CadastroProfissional()
+        form.fields['usuario'].initial = request.session['usuario']
+
         return render(request, 'home.html', {'profissional': profissional, 'usuario_logado':
                                                  request.session.get('usuario'),
                                                  'form': form})
@@ -23,6 +25,9 @@ def home(request):
 def ver_profissional(request, id):
     profissional = Profissional.objects.get(id = id)
     form = CadastroProfissional()
+    usuario = Usuario.objects.get(id = request.session['usuario'])
+    form.fields['usuario'].initial = request.session['usuario']
+    
     return render(request, 'ver_profissional.html', {'profissional' : profissional, 
                                                     'usuario_logado': request.session.get('usuario'),
                                                     'form' : form} )
