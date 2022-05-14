@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block 'conteudo' %}
+
+
+
+
 <div class="container" style="background-color: #ffffff;">
     <div class="row">
         {% for profissionais in profissional %}
@@ -10,26 +14,19 @@
                       <h5 class="card-title">Nome: {{profissionais.nome}}</h5>
                       <h6 class="card-subtitle mb-2 text-muted">{{profissionais.cidade}} {{profissionais.estado}}</h6>
                       <p class="card-text">Telefone: {{profissionais.telefone}}</p>
-                      <p class="card-text">Especialidade(s){{profissionais.especialidades}}</p>
-                      <p class="card-text">Data de cadastro: {{profissionais.data_cadastro}}</p>
-                      
-
+                      <p class="card-text">Especialidade(s){{profissionais.especialidades}}</p>                 
                       <a href="{% url 'ver_profissional' profissionais.id %}" class="btn  btn-dark">Acessar</a>
                     </div>
-                  </div>
-                    
-            </div>
-
+                  
+                </div>    
+            </div>             
             
         {% endfor %}
     
-    
-
-    
-
-    
     </div>
 </div>
+
+
 {% endblock %}
 
 
