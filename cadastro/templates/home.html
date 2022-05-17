@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block 'conteudo' %}
-
+<h1 style="text-align:center ;padding: 15px;">Técnicos</h1>
+<h2 style="padding:10px; text-align: center;" >Os melhores estão aqui, click em acessar e confira seus perfis.</h2>
+<h3 style="text-align: center; padding: 0 0 15px;">Faça parte deste time inscreve-se você também.</h3>
 
 
 
@@ -14,7 +16,7 @@
                       <h5 class="card-title">Nome: {{profissionais.nome}}</h5>
                       <h6 class="card-subtitle mb-2 text-muted">{{profissionais.cidade}} {{profissionais.estado}}</h6>
                       <p class="card-text">Telefone: {{profissionais.telefone}}</p>
-                      <p class="card-text">Especialidade(s){{profissionais.especialidades}}</p>                 
+                      <p class="card-text" style="padding:0 0 10px ;">Especialidade(s) {{profissionais.especialidades}}</p>                 
                       <a href="{% url 'ver_profissional' profissionais.id %}" class="btn  btn-dark">Acessar</a>
                     </div>
                   

@@ -14,7 +14,7 @@
     <nav class="navbar">
         <a class="btn btn-light" href="http://127.0.0.1:8000/" style="color: #011111;">Home</a>
         {% if usuario_logado %}
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" style="color:black">
             Cadastra-se você tambem.
           </button>
           <a href="{% url 'sair' %}" class="btn btn-danger">sair</a>
@@ -71,7 +71,7 @@
 }
 .navbar{
 width: 100%;
-background-color: #252323;
+background-color: #011111;
 height: 60px;
 }
 .fa-github {

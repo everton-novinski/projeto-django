@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block 'conteudo'%}
-
+{% block 'conteudo'%}  
 
 <h1 style="font-size:60px ;text-align: center; padding:20px ;">{{profissional.nome}}</h1>
 
@@ -13,16 +13,9 @@
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Estado: {{profissional.estado}}</li>
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Data cadastro:  {{profissional.data_cadastro}}</li>
       <p class="card-text" style="padding: 0 21px; font-size: 18px;"> {{profissional.descricao}}</p>
-    </ul>
-
-    
-    
-  
+    </ul>    
 </div>
-
 
 {% endblock%}
 
 
-
-  
