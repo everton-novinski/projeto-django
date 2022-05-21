@@ -3,6 +3,25 @@
 
 {% block 'conteudo'%}  
 
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Deseja mesmo excluir ?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">      
+
+        <a href="{% url 'excluir_profissional' id_profissional %}" class="btn btn-outline-danger">Excluir</a>
+         
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 <h1 style="font-size:60px ;text-align: center; padding:20px ;">{{profissional.nome}}</h1>
 
 <div class="card border-dark mb-3;" style="max-width: 18rem; margin: 100px 300px; max-width: 100%;padding:auto; margin-top: 10px; background-color: #00FFFF;">
@@ -15,6 +34,11 @@
       <p class="card-text" style="padding: 0 21px; font-size: 18px;"> {{profissional.descricao}}</p>
     </ul>    
 </div>
+{% if usuario_logado == profissional.usuario.id %}
+  <button type="button" class="btn btn-outline-danger btn-lg" data-toggle="modal" data-target="#exampleModal2" style="margin-left: 47%;">
+    Excluir
+  </button>
+{% endif %}
 
 {% endblock%}
 

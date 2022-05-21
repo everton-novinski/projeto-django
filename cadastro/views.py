@@ -30,7 +30,8 @@ def ver_profissional(request, id):
     
     return render(request, 'ver_profissional.html', {'profissional' : profissional, 
                                                     'usuario_logado': request.session.get('usuario'),
-                                                    'form' : form} )
+                                                    'form' : form,
+                                                    'id_profissional': id,} )
 
 def cadastrar_profissional(request):
     if request.method == 'POST':        
@@ -40,4 +41,9 @@ def cadastrar_profissional(request):
             form.save()
             return redirect('home')
         else:
-            return HttpResponse('errado')    
+            return HttpResponse('errado') 
+
+def excluir_profissional(request, id):
+    usuario = Usuario.objects.get(id = request.session['usuario'])
+    profissional = Profissional.objects.get(id = id).delete()
+    return redirect('/cadastro/home')
