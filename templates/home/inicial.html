@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
+
   {% block 'head'%} {% endblock%}
   <title>{% block 'titulo'%} {% endblock%}</title>
   <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
@@ -68,21 +69,21 @@
           <br>
           <br>
 
-      <div class="col-3 bloco-texto"> 
+      <div class="col-3 bloco-texto" style="padding-top:20px ;"> 
           <img src="{% static 'img/content-1.png' %}" />
           <h3><b>Técnicos</b></h3>
           <p>
               Encontre seu profissional conforme a sua nessecidade em apenas um click.
           </p>
       </div>
-      <div class="col-3 bloco-texto" style="margin-top: 6em;">
+      <div class="col-3 bloco-texto" style="margin-top: 6em; padding-top: 20px;" >
           <img src="{% static 'img/content-2.png' %}" />
           <h3><b>Tecnologia</b></h3>
           <p>
               Profissionais com especialidades em tecnologia.
           </p>
       </div>
-      <div class="col-3 bloco-texto">
+      <div class="col-3 bloco-texto" style="padding-top:10px ;">
           <img src="{% static 'img/content-3.png' %}" />
           <h3><b>Profissionais</b> perto de você.</h3>
           <p>Encontre profissionais perto de você em seu estado e em sua cidade para um atendimento mais agil.
@@ -91,50 +92,13 @@
   </div>
 </div>       
 <footer>
-  <div class="col-100 footer">
-      <div class="content">
-          <div class="col-4">
-              <h3><b>Populr Post</b></h3>
-              <p>Lorem Ipsum is simply dummy
-                  text of the printing.</p>
-              <p class="clock">02-Maio 2022<p>                      
-          </div>
-          <div class="col-4">
-              <h3><b>Tags</b></h3>
-              <p>apps blog blogroll christmas cms coda concert daily design develop dialog drinks envato food fun
-                  gallery gift holiday icon illustration ipad iphone journal jquery label link marketing mobile
-                  motion music photo profession quotation recipes show sound strategy tv typography video</p>
-          </div>
-          <div class="col-4">
-              <h3><b>A little about us</b></h3>
-              <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly
-                  believable.
-                  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.
-              </p>
-          </div>
-          <div class="col-4">
-              <h3><b>Get in touch</b></h3>
-              <p>
-                  Lorem Ipsum is simply dummy
-                  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                  text ever since.
-              </p>
-              <p class="local">Santa Catarina, BR<p>
-                      <p class="emailico">email@email.com<p>
-                              <p class="telefoneico">890-09880-45590<p>
-          </div>
-      </div>
-  </div>
-</footer>
 <div class="col-100 footer-2">
-    <div class="content">   
-         <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-        </p>
-    </div>
+    <div class="text-center" style="background-color: #011111; padding: 72px ; color: white;" >
+        &copy 2022 Copyright: <a class="fa fa-github" href="https://github.com/" style="color: white;"></a>
+        <a href="https://www.linkedin.com/in/everton-gil-novinski-b54318129/" class="fa fa-linkedin"></a>
+      </div>
 </div>
+</footer>
   
   {% endblock%}
 </body>
@@ -229,6 +193,12 @@ margin: -17px 1px;
 opacity: 0.7;
 }
 
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  background-color: #011111;
+}
+
 .col-100 {   
 width: 100%;    
 float: left;
@@ -269,75 +239,19 @@ padding: 0px!important;
     position: relative;
 }
 
-
-
-.footer h3 {
-    text-align: left;
-}
-
-
-.footer p {
-    width: 90%;
-    text-align: left;
-}
-.footer {
-background-image: url("{% static 'img/footer.png' %}");
-color: #ffffff;
-}
-
 .footer-2 {
-background-image: url("{% static 'img/footer2.png' %}");
-color: #c1c1c1;
+text-align: center;
+color: white;
 height: 90px;
+padding-top: 50px;
             
 } 
 
-.footer-2 p {
-padding: 10px;
-}
 
-.clock {
-color: #130101!important;
-}
 
-.clock:before {
-content: '';
-width:  15px;
-height: 15px;
 
-background-image: url("{% static 'img/clock.png' %}");
-float: left;
-background-repeat: no-repeat;
-padding-left: 5px;
-}
 
-.local:before, .emailico:before, .telefoneico:before {
-content: '';
-width:  17px;
-height: 24px;
 
-float: left;
-background-repeat: no-repeat;
-padding-left: 5px;
-}
-.local:before {
-background-image: url("{% static 'img/local.png' %}");
-}
-
-.emailico:before {
-background-image: url("{% static 'img/email.png' %}");
-}
-
-.telefoneico:before {
-background-image: url("{% static 'img/telefoneico.png' %}");
-color: #0a0000;
-}
-
-.col-4 {
-float: left;
-width: 25%;
-text-align: center;
-}
 </style>
 
 
