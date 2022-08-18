@@ -12,33 +12,73 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">      
-
+      <div class="modal-body">    
         <a href="{% url 'excluir_profissional' id_profissional %}" class="btn btn-outline-danger">Excluir</a>
-         
-      </div>
-      
+      </div>      
     </div>
   </div>
 </div>
 
 <h1 style="font-size:60px ;text-align: center; padding:20px ;">{{profissional.nome}}</h1>
 
-<div class="card border-dark mb-3;" style="max-width: 18rem; margin: 100px 300px; max-width: 100%;padding:auto; margin-top: 10px; background-color: #00FFFF;">
-    <ul class="list-group list-group-flush" style="background-color:#00FFFF;">
-      
+<div class="card border-dark mb-3" style="max-width: 18rem; margin: 100px 300px; max-width: 100%;padding:auto; margin-top: 10px; background-color: #00FFFF;">
+    <ul class="list-group list-group-flush" style="background-color:#00FFFF;">      
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Telefone: {{profissional.telefone}}</li>
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Cidade: {{profissional.cidade}}</li>
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Estado: {{profissional.estado}}</li>
       <li class="list-group-item" style="background-color:#00FFFF; font-size: 18px;">Data cadastro:  {{profissional.data_cadastro}}</li>
       <p class="card-text" style="padding: 0 21px; font-size: 18px;"> {{profissional.descricao}}</p>
+      <button onclick="avaliado({{id_profissional}})" type="button" class="btn btn-info btn-lg" style="margin: 20px 280px 10px 280px" data-toggle="modal" data-target="#avaliacaoModal">Avaliar</button>
     </ul>    
 </div>
+
 {% if usuario_logado == profissional.usuario.id %}
+
   <button type="button" class="btn btn-outline-danger btn-lg" data-toggle="modal" data-target="#exampleModal2" style="margin-left: 47%;">
     Excluir
-  </button>
+  </button> 
+
 {% endif %}
+
+
+
+
+<div class="modal fade" id="avaliacaoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Avaliar Profissional</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'processa_avaliacao' %}" method="POST">{% csrf_token%}
+          <input type="hidden" value="{{id_profissional}}" name="id_profissional">
+          <input id="id_avaliacao" type="hidden" name="id_avaliacao">
+          <select class="form-control" name="opcoes">
+            <option value="P">Péssimo</option>
+            <option value="R">Ruim</option>
+            <option value="B">Bom</option>
+            <option value="O">Ótimo</option>
+            
+          </select>
+          <br>
+          <input type="submit" class="btn btn-info" value="Avaliar">
+          <br>
+        </form>
+
+      </div>      
+    </div>
+  </div>
+</div>
+
+<script>
+  function avaliado(id_avaliacao){
+    input_avaliacao = document.getElementById('id_avaliacao')
+    input_avaliacao.value = id_avaliacao
+  }
+</script>
 
 {% endblock%}
 

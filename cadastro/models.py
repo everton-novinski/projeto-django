@@ -27,4 +27,20 @@ class Profissional(models.Model):
         verbose_name = 'Profissional'
 
     def __str__(self):
-        return self.nome    
+        return self.nome   
+
+class Avaliacao(models.Model):
+    choices = (
+        ('P', 'Péssimo'),
+        ('R', 'Ruim'),
+        ('B', 'Bom'),
+        ('O', 'Ótimo')
+    )
+    nome_avaliador = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING, blank = True, null = True)
+    avaliacao = models.CharField(max_length=1, choices=choices, null=True, blank=True) 
+    
+    class Meta:
+        verbose_name = 'Avaliaçao'
+
+    def __str__(self) -> str:
+        return self.avaliacao    

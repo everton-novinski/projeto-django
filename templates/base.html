@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-  
+  <head>  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -9,22 +8,19 @@
     {% block 'head'%} {% endblock%}
     <title>{% block 'titulo'%} {% endblock%}</title>
   </head>
-  <body>
-    
+  <body>    
     <nav class="navbar">
         <a class="btn btn-light" href="http://127.0.0.1:8000/" style="color: #011111;">Home</a>
         {% if usuario_logado %}
           <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" style="color:black">
-            Cadastra-se você tambem.
+            Cadastre-se você tambem.
           </button>
           <a href="{% url 'sair' %}" class="btn btn-danger">sair</a>
          
         {% endif %}
-    </nav>
-  
+    </nav> 
     
     {% block 'conteudo'%} {% endblock%}
-
         
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" ></script>
@@ -47,13 +43,12 @@
               </table>
               <input type="submit" class="btn btn-outline-secondary" value="Cadastrar">             
             </form>
-          </div>
-          
+          </div>          
         </div>
       </div>    
-    </div>
-    
+    </div>    
     {% endif %}
+
 <footer style="padding-top:20px ;">
     <div class="text-center" style="background-color: #011111; padding: 72px ; color: white;" >
       &copy 2022 Copyright: <a class="fa fa-github" href="https://github.com/" style="color: white;"></a>
@@ -64,15 +59,18 @@
   </body>
 </html>
 <style>
+  
+
 .navbar-1{
   color: white;
-
 }
+
 .navbar{
 width: 100%;
 background-color: #011111;
 height: 60px;
 }
+
 .fa-github {
 background:#011111;
 color: rgb(248, 252, 247);
@@ -90,6 +88,7 @@ margin: -17px 1px;
 .fa:hover {
 opacity: 0.7;
 }
+
 .fa-linkedin {
   background: #011111;
   color: white;
